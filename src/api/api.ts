@@ -5,7 +5,7 @@ export const getData = async <T>( type: string ): Promise<T[]> => {
 
   if (type) {
     while(nextPage) {
-      const response2 = await fetch(`http://swapi.dev/api/${type}/?page=${currentPage}`).then(respond => respond.json());
+      const response2 = await fetch(`https://swapi.dev/api/${type}/?page=${currentPage}`).then(respond => respond.json());
       currentList.push(...response2.results)
       currentPage++;
       nextPage = response2.next;
