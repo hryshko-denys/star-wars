@@ -32,8 +32,6 @@ export const Content: FC = () => {
 
   }, [currentTitle]);
 
-  console.log(categoryContent)
-
   return (
     <div className="content">
       <Input />

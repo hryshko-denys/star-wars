@@ -26,7 +26,6 @@ export const EntitiesList: FC<EntitiesListProps> = ({ list, isLoading }) => {
   const filteredList = filterList(list, queryFilter, currentPath);
   const sortedList = sortList(filteredList, querySortOrder, currentPath)
   const reversedList = reverseList(sortedList, querySortOrder)
-  console.log(filteredList)
 
   return (
     <div className="entities">
@@ -39,27 +38,30 @@ export const EntitiesList: FC<EntitiesListProps> = ({ list, isLoading }) => {
           />
         </div>
       }
-      <h2 className="entities__heading">Please, choose one to get more information</h2>
+
       {list.length !== 0 && (
-        <ul className="entities__list">
-          {reversedList.map(item => {
-            const nameForRoute = item.name && item.name.replace(/\s/g, '-');
-            const titleForRoute = item.title && item.title.replace(/\s/g, '-');
-            return (
-              <li 
-                key={item.name || item.title}
-                className="entities__item"
-              >
-                <Link 
-                  className="entities__link"
-                  to={`/categories/${currentPath}/${nameForRoute || titleForRoute}`}
+        <>
+          <h2 className="entities__heading">Please, choose one to get more information</h2>
+          <ul className="entities__list">
+            {reversedList.map(item => {
+              const nameForRoute = item.name && item.name.replace(/\s/g, '-');
+              const titleForRoute = item.title && item.title.replace(/\s/g, '-');
+              return (
+                <li 
+                  key={item.name || item.title}
+                  className="entities__item"
                 >
-                  {item.name || item.title}
-                </Link>
-              </li>
-            )
-          } )}
-        </ul>
+                  <Link 
+                    className="entities__link"
+                    to={`/categories/${currentPath}/${nameForRoute || titleForRoute}`}
+                  >
+                    {item.name || item.title}
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </>
         )}
         <EntityInfo list={list} />
     </div>

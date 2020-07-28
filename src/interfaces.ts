@@ -81,9 +81,9 @@ interface Species {
   designation: string;
   average_lifespan: string;
   average_height: string;
-  eye_color: string;
-  hair_color: string;
-  skin_color: string;
+  eye_colors: string;
+  hair_colors: string;
+  skin_colors: string;
   language: string;
   homeworld: string;
   people: string[];
@@ -112,4 +112,9 @@ interface Planet {
 
 export interface StarwarsTypes extends Planet, Species, Vehicle, Starship, Film, People {
 
+}
+
+export interface StarwarsEntitiesInterface {
+  title: string;
+  field: keyof StarwarsTypes;
 }
