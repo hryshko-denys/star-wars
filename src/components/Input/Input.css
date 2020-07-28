@@ -1,0 +1,10 @@
+.form-control {
+  width: 30%;
+  margin-right: 30px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}

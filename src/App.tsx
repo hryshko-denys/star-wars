@@ -3,7 +3,7 @@ import { Redirect, Switch, Route } from 'react-router-dom';
 import './App.css';
 import { Header } from './components/Header/Header';
 import { Home } from './components/Home/Home';
-// import { NotFoundPage } from './components/NotFoundPage/NotFoundPage';
+import { NotFoundPage } from './components/NotFoundPage/NotFoundPage';
 import { CategoriesList } from './components/CategoriesList/CategoriesList';
 
 const App: FC = () => (
@@ -17,11 +17,10 @@ const App: FC = () => (
         <Redirect to="/" />
       </Route>
       <Route
-        path="/categories/:title?"
-        // render={({ match }) => <CategoriesList titleId={match.params.title} />}
+        path="/categories/:title?/:entity?"
         component={CategoriesList}
       />
-      {/* <Route path="*" component={NotFoundPage} /> */}
+      <Route path="*" component={NotFoundPage} />
     </Switch>
   </>
 );

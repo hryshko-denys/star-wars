@@ -1,0 +1,43 @@
+.entities {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+
+  margin-right: 50px;
+}
+
+.entities__heading {
+  position: absolute;
+  top: -30px;
+  left: calc(50% - 15px);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.entities__image-wrapper {
+  position: absolute;
+  top: 40px;
+  right: calc(50% - 85px);
+}
+
+.entities__image {
+  width: 170px;
+  height: 96px;
+}
+
+.entities__list {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 300px);
+
+  border: 2px solid blue;
+  border-radius: 20px;
+  width: 600px;
+}
+
+.entities__link {
+  width: max-content;
+  display: block;
+  padding: 10px;
+}
+
