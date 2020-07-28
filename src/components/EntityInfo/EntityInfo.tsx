@@ -14,7 +14,7 @@ import {
 import './EntityInfo.css';
 
 interface EntityInfoProps {
-  list: StarwarsTypes[];
+  categoryList: StarwarsTypes[];
 }
 
 interface MatchParams {
@@ -22,11 +22,11 @@ interface MatchParams {
   entity: string;
 }
 
-export const EntityInfo: FC<EntityInfoProps> = ({ list }) => {
+export const EntityInfo: FC<EntityInfoProps> = ({ categoryList }) => {
   const currentCategory = useParams<MatchParams>().title;
   const currentEntity = useParams<MatchParams>().entity;
 
-  const entityToShow = list.find(entity => {
+  const entityToShow = categoryList.find(entity => {
     const nameForRoute = entity.name && entity.name.replace(/\s/g, '-');
     const titleForRoute = entity.title && entity.title.replace(/\s/g, '-');
     return currentEntity === nameForRoute || currentEntity === titleForRoute;
@@ -39,7 +39,7 @@ export const EntityInfo: FC<EntityInfoProps> = ({ list }) => {
         {entityToShow.name || entityToShow.title}
       </h2>}
       <ul className="entity__list">
-      {currentEntity && list.map(entity => {
+      {currentEntity && categoryList.map(entity => {
         const nameForRoute = entity.name && entity.name.replace(/\s/g, '-');
         const titleForRoute = entity.title && entity.title.replace(/\s/g, '-');
 

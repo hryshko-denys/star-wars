@@ -12,7 +12,13 @@ export const CategoriesList: FC = () => (
         <ul className="navbar-nav mr-auto">
           {categoriesData.map(category => (
           <li className="nav-item" key={uuid()}>
-            <NavLink className="nav-link" to={`/categories/${category.title}`} exact> {category.title} </NavLink>
+            <NavLink 
+              className="nav-link" 
+              to={`/categories/${category.title}`} 
+              exact
+            > 
+              {category.title} 
+            </NavLink>
           </li>
           ))}
         </ul>

@@ -8,7 +8,7 @@ import { EntityInfo } from '../EntityInfo/EntityInfo'
 import './EntitiesList.css';
 
 interface EntitiesListProps {
-  list: StarwarsTypes[];
+  categoryList: StarwarsTypes[];
   isLoading: boolean;
 }
 
@@ -16,14 +16,14 @@ interface MatchParams {
   title: string;
 }
 
-export const EntitiesList: FC<EntitiesListProps> = ({ list, isLoading }) => {
+export const EntitiesList: FC<EntitiesListProps> = ({ categoryList, isLoading }) => {
   const currentPath = useParams<MatchParams>().title;
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const queryFilter = searchParams.get('query') || '';
   const querySortOrder = searchParams.get('sortOrder') || '';
 
-  const filteredList = filterList(list, queryFilter, currentPath);
+  const filteredList = filterList(categoryList, queryFilter, currentPath);
   const sortedList = sortList(filteredList, querySortOrder, currentPath)
   const reversedList = reverseList(sortedList, querySortOrder)
 
@@ -39,7 +39,7 @@ export const EntitiesList: FC<EntitiesListProps> = ({ list, isLoading }) => {
         </div>
       }
 
-      {list.length !== 0 && (
+      {categoryList.length !== 0 && (
         <>
           <h2 className="entities__heading">Please, choose one to get more information</h2>
           <ul className="entities__list">
@@ -63,7 +63,7 @@ export const EntitiesList: FC<EntitiesListProps> = ({ list, isLoading }) => {
           </ul>
         </>
         )}
-        <EntityInfo list={list} />
+        <EntityInfo categoryList={categoryList} />
     </div>
   );
 } 

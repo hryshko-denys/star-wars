@@ -35,7 +35,7 @@ export const Content: FC = () => {
   return (
     <div className="content">
       <Input />
-      <EntitiesList list={categoryContent} isLoading={isLoading} />
+      <EntitiesList categoryList={categoryContent} isLoading={isLoading} />
     </div>
   );
 } 
