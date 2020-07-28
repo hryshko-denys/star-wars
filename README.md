@@ -1,4 +1,4 @@
-# React ToDo App
+# React Star wars
 [DEMO LINK](https://hryshko-denys.github.io/star-wars/)
 
 ## Tech stack
