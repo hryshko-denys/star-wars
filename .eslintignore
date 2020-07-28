@@ -1,0 +1,4 @@
+dist
+.cache
+*.unit.test.js
+setupTests.js
