@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/react-template/static/css/main.b04f75c8.chunk.css",
-    "main.js": "/react-template/static/js/main.2783b5d1.chunk.js",
-    "main.js.map": "/react-template/static/js/main.2783b5d1.chunk.js.map",
-    "runtime-main.js": "/react-template/static/js/runtime-main.c9c040d8.js",
-    "runtime-main.js.map": "/react-template/static/js/runtime-main.c9c040d8.js.map",
-    "static/js/2.fb193aa5.chunk.js": "/react-template/static/js/2.fb193aa5.chunk.js",
-    "static/js/2.fb193aa5.chunk.js.map": "/react-template/static/js/2.fb193aa5.chunk.js.map",
-    "index.html": "/react-template/index.html",
-    "precache-manifest.09311a9cdc7451c7f167ea6de74e02d7.js": "/react-template/precache-manifest.09311a9cdc7451c7f167ea6de74e02d7.js",
-    "service-worker.js": "/react-template/service-worker.js",
-    "static/css/main.b04f75c8.chunk.css.map": "/react-template/static/css/main.b04f75c8.chunk.css.map",
-    "static/js/2.fb193aa5.chunk.js.LICENSE.txt": "/react-template/static/js/2.fb193aa5.chunk.js.LICENSE.txt",
-    "static/media/loading.jpg": "/react-template/static/media/loading.b8a7f631.jpg"
+    "main.css": "/star-wars/static/css/main.b04f75c8.chunk.css",
+    "main.js": "/star-wars/static/js/main.2783b5d1.chunk.js",
+    "main.js.map": "/star-wars/static/js/main.2783b5d1.chunk.js.map",
+    "runtime-main.js": "/star-wars/static/js/runtime-main.dde144dc.js",
+    "runtime-main.js.map": "/star-wars/static/js/runtime-main.dde144dc.js.map",
+    "static/js/2.fb193aa5.chunk.js": "/star-wars/static/js/2.fb193aa5.chunk.js",
+    "static/js/2.fb193aa5.chunk.js.map": "/star-wars/static/js/2.fb193aa5.chunk.js.map",
+    "index.html": "/star-wars/index.html",
+    "precache-manifest.009318890278a844d31682d35da877c3.js": "/star-wars/precache-manifest.009318890278a844d31682d35da877c3.js",
+    "service-worker.js": "/star-wars/service-worker.js",
+    "static/css/main.b04f75c8.chunk.css.map": "/star-wars/static/css/main.b04f75c8.chunk.css.map",
+    "static/js/2.fb193aa5.chunk.js.LICENSE.txt": "/star-wars/static/js/2.fb193aa5.chunk.js.LICENSE.txt",
+    "static/media/loading.jpg": "/star-wars/static/media/loading.b8a7f631.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c9c040d8.js",
+    "static/js/runtime-main.dde144dc.js",
     "static/js/2.fb193aa5.chunk.js",
     "static/css/main.b04f75c8.chunk.css",
     "static/js/main.2783b5d1.chunk.js"
